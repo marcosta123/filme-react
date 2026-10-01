@@ -1,0 +1,82 @@
+1. CRIAR COMPONENTES: 
+CardFilm, RatingFilme, ButtomMovie, ButtomTV, CastFilm
+
+
+2. services: 
+Filmes Populares
+https://api.themoviedb.org/3/movie/popular GET
+
+
+Filmes Melhor avaliados
+https://api.themoviedb.org/3/movie/top_rated GET
+
+Filmes Em
+exibição
+https://api.themoviedb.org/3/movie/now_playing GET
+
+Filmes Embreve
+https://api.themoviedb.org/3/movie/upcoming GET
+
+Séries Populares
+https://api.themoviedb.org/3/tv/popular GET
+
+Séries Melhor avaliadas
+https://api.themoviedb.org/3/tv/top_rated GET
+
+Séries No ar 
+https://api.themoviedb.org/3/tv/on_the_air GET
+
+Séries Em exibição hoje
+https://api.themoviedb.org/3/tv/airing_today GET
+
+DetalhesFilme
+https://api.themoviedb.org/3/movie/{movie_id} GET
+
+DetalhesSérie 
+https://api.themoviedb.org/3/tv/{tv_id} GET
+
+Elenco Filme 
+https://api.themoviedb.org/3/movie/{movie_id}/credits GET
+
+Elenco Série 
+https://api.themoviedb.org/3/tv/{tv_id}/credits GET 
+
+Imagens Filme
+https://api.themoviedb.org/3/movie/{movie_id}/images GET  
+
+ImagensSérie 
+https://api.themoviedb.org/3/tv/{tv_id}/images GET
+
+
+3. CRIAR PAGES:
+*Página de listagem de filmes (/movies)
+*Página de listagem de séries (/tv)
+*Página de detalhes de filme (/movie/:id)
+*Página de detalhes de série (/tv/:id)
+
+
+4. Funcionalidades:
+○ Cada item deve mostrar:
+■ Imagem do poster
+■ Título
+■ Classificação
+■ Data de lançamento (filmes) ou data do primeiro episódio (séries)
+○ Na página de detalhes deve mostrar:
+■ Informação principal
+■ Elenco com fotos e nomes
+■ Equipa técnica com funções
+
+
+5. Extras (opcionais):
+○ Barra de pesquisa
+○ Favoritos (usando localStorage)
+○ Paginação
+○ Modo escuro/claro
+
+
+Notas:
+● Todos os pedidos à API devem incluir a chave de autorização no header
+● A aplicação deve ser responsiva
+● Deve incluir estados de loading e tratamento de erros
+Site que vos disponibilizar no final para vosso portfolio:
+https://imtv-fe.vercel.app/
