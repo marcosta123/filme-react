@@ -1,21 +1,21 @@
-import { useEffect, useState } from "react";
-import { useParams } from 'react-router';
+// import { useEffect, useState } from "react";
+// import { useParams } from 'react-router';
 
-Function PopularMovies() {
-    const params = useParams()
+// function PopularMovies() {
+//     const params = useParams()
 
 
-    useEffect(() => {
-        const fetchCurrency = async () => {
-            const request = await fetch(
-                'https://api.themoviedb.org/3/movie/popular',{
+//     useEffect(() => {
+//         const fetchCurrency = async () => {
+//             const request = await fetch(
+//                 'https://api.themoviedb.org/3/movie/popular',{
 
-                    headers: {}
-                }
-            )
+//                     headers: {}
+//                 }
+//             )
 
-            const response = await request.json()
-        }
-    })
-}
+//             const response = await request.json()
+//         }
+//     })
+// }
 

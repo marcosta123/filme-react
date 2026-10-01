@@ -1,28 +1,22 @@
+/* src/components/Buttons.css */
 .media-switch {
-  display: flex;
-  gap: 4px;
-  width: fit-content;
-  padding: 4px;
-  border-radius: 999px;
-  background: #252525;
-}
-
-.media-switch__item {
-  min-width: 88px;
-  padding: 10px 18px;
-  border-radius: 999px;
-  color: #ccc;
-  text-align: center;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 160ms ease, color 160ms ease;
-}
-
-.media-switch__item:hover {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3ebcee;
   color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-.media-switch__item.is-active {
-  background: #e63946;
+.media-switch2 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #dd370d;
   color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
 }

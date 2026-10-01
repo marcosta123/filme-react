@@ -1,11 +1,13 @@
-import './App.css'
-import ButtomMovie from './components/Buttons'
+  // import './App.css'
+  import { ButtomMovie, ButtomTv } from "./components/Buttons";
 
-function App() {
-  return(
-    <><h1>ola</h1>
-    <ButtomMovie /></>
-  )
-}
-
+  function App() {
+    return (
+      <div>
+        <ButtomMovie />
+        <ButtomTv />
+  
+      </div>
+    );
+  }
 export default App
