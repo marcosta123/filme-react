@@ -3,20 +3,18 @@
   display: inline-block;
   padding: 10px 20px;
   background-color: #3ebcee;
-  color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
 }
 
-.media-switch2 {
-  display: inline-block;
-  padding: 10px 20px;
+.media-switch-primary{
   background-color: #dd370d;
   color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
+}
+
+.media-switch-secondary{
+    background-color: #3ab6f0;
+  color: white;
 }

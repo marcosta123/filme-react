@@ -1,12 +1,14 @@
   // import './App.css'
-  import { ButtomMovie, ButtomTv } from "./components/Buttons";
+  import Button from "./components/Buttons";
+import PopularMovies from "./services/MoviesApi";
+
 
   function App() {
     return (
       <div>
-        <ButtomMovie />
-        <ButtomTv />
-  
+        <Button text="Movies" variant="primary"/>
+        <Button text="TV" variant="secondary"/>
+        <PopularMovies/>
       </div>
     );
   }
