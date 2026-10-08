@@ -7,14 +7,16 @@ type Movie = {
   title: string;
   release_date: string;
 };
+type MovieType = { type: "top_rated" | "popular" | "now_playing" | "upcoming" };
 
-function PopularMovies() {
+function PopularMovies({ type }: MovieType) {
   const [movies, setMovies] = useState<Movie[]>([]);
+  console.log(type);
 
   useEffect(() => {
     const fetchPopularMovies = async () => {
       const response = await fetch(
-        "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1",
+        `https://api.themoviedb.org/3/movie/${type}`,
         {
           headers: {
             Authorization:
@@ -28,22 +30,35 @@ function PopularMovies() {
 
     fetchPopularMovies();
   }, []);
-
+  const moviesTypes = {
+    popular: "Popular Movies",
+    top_rated: "Top Rated",
+    now_playing: "Filmes em Exibicao",
+    upcoming: "Filmes Embreve"
+  };
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr" }}>
-      {movies.map((movie) => (
-        <CardFilm
-          key={movie.id}
-          image={
-            movie.poster_path
-              ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-              : ""
-          }
-          title={movie.title}
-          year={movie.release_date ? movie.release_date.slice(0, 4) : "N/A"}
-        />
-      ))}
-    </div>
+    <section>
+      <h2>{moviesTypes[type]}</h2>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr",
+        }}
+      >
+        {movies.map((movie) => (
+          <CardFilm
+            key={movie.id}
+            image={
+              movie.poster_path
+                ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+                : ""
+            }
+            title={movie.title}
+            year={movie.release_date ? movie.release_date.slice(0, 4) : "N/A"}
+          />
+        ))}
+      </div>
+    </section>
   );
 }
 

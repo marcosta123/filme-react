@@ -8,7 +8,10 @@ import PopularMovies from "./services/MoviesApi";
       <div>
         <Button text="Movies" variant="primary"/>
         <Button text="TV" variant="secondary"/>
-        <PopularMovies/>
+        <PopularMovies type="popular"/>
+        <PopularMovies type="top_rated"/>
+        <PopularMovies type="now_playing"/>
+        <PopularMovies type="upcoming"/>
       </div>
     );
   }
