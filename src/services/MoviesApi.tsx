@@ -9,12 +9,12 @@ type Movie = {
 };
 type MovieType = { type: "top_rated" | "popular" | "now_playing" | "upcoming" };
 
-function PopularMovies({ type }: MovieType) {
+function CategoryMovies({ type }: MovieType) {
   const [movies, setMovies] = useState<Movie[]>([]);
   console.log(type);
 
   useEffect(() => {
-    const fetchPopularMovies = async () => {
+    const fetchCategoryMovies = async () => {
       const response = await fetch(
         `https://api.themoviedb.org/3/movie/${type}`,
         {
@@ -28,7 +28,7 @@ function PopularMovies({ type }: MovieType) {
       setMovies(fetchedPopularMovies.results);
     };
 
-    fetchPopularMovies();
+    fetchCategoryMovies();
   }, []);
   const moviesTypes = {
     popular: "Popular Movies",
@@ -62,4 +62,4 @@ function PopularMovies({ type }: MovieType) {
   );
 }
 
-export default PopularMovies;
+export default CategoryMovies;

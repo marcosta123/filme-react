@@ -5,11 +5,14 @@ import "../Buttons.css";
 type ButtonProps = {
   text: string;
   variant?: "primary" |  "secondary";
-};
+  onClick?:() => void;
+}
 
-function Button({ text, variant}: ButtonProps) {
+function Button({ text, variant, onClick}: ButtonProps) {
   return(
-    <button className={`media-switch media-switch-${variant}`}>{text}</button>
+    <button className={`media-switch media-switch-${variant}`}
+    onClick={onClick}
+    >{text}</button>
   );
 }
 

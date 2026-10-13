@@ -1,18 +1,24 @@
-  // import './App.css'
-  import Button from "./components/Buttons";
-import PopularMovies from "./services/MoviesApi";
+import { Link, Route, Routes } from "react-router-dom";
+import "./Buttons.css";
+import FilmPage from "./pages/FilmPage";
+import SeriePage from "./pages/SeriePage";
 
+function App() {
+  return (
+    <div>
+      <Link to="/" className="media-switch media-switch-primary">
+        Movies
+      </Link>
+      <Link to="/series" className="media-switch media-switch-secondary">
+        TV
+      </Link>
 
-  function App() {
-    return (
-      <div>
-        <Button text="Movies" variant="primary"/>
-        <Button text="TV" variant="secondary"/>
-        <PopularMovies type="popular"/>
-        <PopularMovies type="top_rated"/>
-        <PopularMovies type="now_playing"/>
-        <PopularMovies type="upcoming"/>
-      </div>
-    );
-  }
-export default App
+      <Routes>
+        <Route path="/" element={<FilmPage />} />
+        <Route path="/series" element={<SeriePage />} />
+      </Routes>
+    </div>
+  );
+}
+
+export default App;
