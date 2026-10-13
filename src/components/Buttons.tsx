@@ -14,6 +14,6 @@ function Button({ text, variant, onClick}: ButtonProps) {
     onClick={onClick}
     >{text}</button>
   );
-}
+  }
 
 export default Button;

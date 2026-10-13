@@ -4,8 +4,8 @@ import CardFilm from "../components/CardFilm";
 type Serie = {
   id: number;
   poster_path: string | null;
-  title: string;
-  release_date: string;
+  name: string;
+  first_air_date: string;
 };
 
 type SerieType = { type: "popular" | "top_rated" | "on_the_air" | "airing_today" };
@@ -55,8 +55,8 @@ function CategorySeries({ type }: SerieType) {
                 ? `https://image.tmdb.org/t/p/w500${serie.poster_path}`
                 : ""
             }
-            title={serie.title}
-            year={serie.release_date ? serie.release_date.slice(0, 4) : "N/A"}
+            title={serie.name}
+            year={serie.first_air_date ? serie.first_air_date.slice(0, 4) : "N/A"}
           />
         ))}
       </div>
