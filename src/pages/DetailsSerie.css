@@ -1,0 +1,145 @@
+.details {
+  min-height: 100vh;
+  color: #fff;
+  background: #171717;
+}
+
+.details__header {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 430px;
+  padding: 24px 5%;
+  background: #18212c;
+}
+
+.details__header::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(#0009, #0009);
+  content: "";
+}
+
+.details__backdrop {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.details__header > a {
+  color: #fff;
+}
+
+.details__main {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 48px auto;
+}
+
+.details__poster {
+  width: 180px;
+  border-radius: 6px;
+}
+
+.details__genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.details__genre {
+  padding: 5px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+.details__content {
+  padding: 28px 5%;
+}
+
+.details__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.details__card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.details__card img {
+  width: 140px;
+  height: 190px;
+  object-fit: cover;
+}
+
+.details__card p,
+.details__crew-card p {
+  margin: 6px 0 16px;
+}
+
+.details__cast-person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 130px;
+  text-align: center;
+}
+
+.details__cast-image,
+.details__cast-placeholder {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.details__cast-image {
+  object-fit: cover;
+}
+
+.details__cast-placeholder {
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: #555;
+  font-size: 2rem;
+}
+
+.details__cast-person p {
+  margin: 5px 0 16px;
+  opacity: 0.75;
+}
+
+.details__crew-card {
+  min-width: 140px;
+}
+
+@media (max-width: 600px) {
+  .details__main {
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .details__poster {
+    width: 130px;
+  }
+}
